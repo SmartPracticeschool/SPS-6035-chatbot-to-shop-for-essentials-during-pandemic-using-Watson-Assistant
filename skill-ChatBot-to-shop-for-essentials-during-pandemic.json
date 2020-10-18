@@ -1,0 +1,873 @@
+{
+  "intents": [
+    {
+      "intent": "enquiry",
+      "examples": [
+        {
+          "text": "by what time you can deliver the product"
+        },
+        {
+          "text": "can u please provide list of items in the store"
+        },
+        {
+          "text": "is there any offers or discount of today"
+        },
+        {
+          "text": "I want to know list of items in store"
+        },
+        {
+          "text": "show the price of vegetables and fruits"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "Good Afternoon"
+        },
+        {
+          "text": "Good Evening"
+        },
+        {
+          "text": "Good Morning"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hii"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "order",
+      "examples": [
+        {
+          "text": "Can you place the order"
+        },
+        {
+          "text": "I want to place an order"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "address",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "address",
+          "synonyms": [
+            "place"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "contactnumber",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "contact number",
+          "patterns": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "enquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "list",
+          "synonyms": [
+            "lists",
+            "outline",
+            "overview",
+            "selection",
+            "shortlist",
+            "summary"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "offers",
+          "synonyms": [
+            "deals",
+            "discount"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "price",
+          "synonyms": [
+            "cost",
+            "prices",
+            "rate"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "special item",
+          "synonyms": [
+            "specials"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Good Afternoon",
+          "synonyms": [
+            "GA",
+            "gud afternoon"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Evening",
+          "synonyms": [
+            "gd evening",
+            "GE"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Morning",
+          "synonyms": [
+            "GM",
+            "gud morning"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "items",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Apple",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bell Pepper",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Chilli",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dragon Fruit",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Garlic",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ginger",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Onion",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Potato",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Pumpkin",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Strawberries",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tomato",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "order",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "order",
+          "synonyms": [
+            "buy",
+            "orders",
+            "purchase"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "payment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Card",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Cash on Delivery",
+          "synonyms": [
+            "CoD"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "UPI",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "specials",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Bell Pepper",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dragon Fruit",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Strawberries",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_5_1602961810225",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_5_1602961810225",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1602962200299",
+      "previous_sibling": "node_8_1602963665353"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1603011311975",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1603011312008",
+      "previous_sibling": "handler_5_1603011312008"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "we accept COD,card and UPI what is your mode of payment"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_1_1602963003153",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1602963003172",
+      "previous_sibling": "handler_9_1602963003172"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1603011369141",
+      "context": {
+        "address": "@address"
+      },
+      "conditions": "@address",
+      "event_name": "input",
+      "dialog_node": "handler_3_1603011369167"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How much(in kg) do u want"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1602962965528",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1602962965546",
+      "previous_sibling": "handler_7_1602962965546"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1603011311975",
+      "context": {
+        "contactnumber": "@contactnumber"
+      },
+      "conditions": "@contactnumber",
+      "event_name": "input",
+      "dialog_node": "handler_5_1603011312008"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "can u provide me with items u want"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_5_1602962201447",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1602962201522",
+      "previous_sibling": "handler_9_1602962201522"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1602962965528",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_7_1602962965546"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1603011369141",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1603011369167",
+      "previous_sibling": "handler_3_1603011369167"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1602962201447",
+      "context": {
+        "items": "@items"
+      },
+      "conditions": "@items",
+      "event_name": "input",
+      "dialog_node": "handler_9_1602962201522"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1602963003153",
+      "context": {
+        "payment": "@payment"
+      },
+      "conditions": "@payment",
+      "event_name": "input",
+      "dialog_node": "handler_9_1602963003172"
+    },
+    {
+      "type": "standard",
+      "title": "greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#greetings || @greetings",
+      "dialog_node": "node_2_1602952292421",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "email",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you for giving your email id.Your email id  $email will be used for further references.\nYour order will be delivered at your address  $address .Please choose products to order from our list."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "context": {
+        "email": "@email.literal",
+        "address": "@address.literal",
+        "contactnumber": "@contactumber.literal"
+      },
+      "conditions": "@email || @address || @contactnumber",
+      "dialog_node": "node_4_1602965594595"
+    },
+    {
+      "type": "frame",
+      "title": "order",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank You,Your order of $number kg  of $items is placed.Please pay using $payment .Your receipt is sent to your email id $email and contact number. Your order is shipped to your address "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#order || @order:order",
+      "digress_in": "returns",
+      "dialog_node": "node_5_1602961810225",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_9_1602957639320",
+      "digress_out_slots": "allow_returning"
+    },
+    {
+      "type": "standard",
+      "title": "specials",
+      "parent": "node_9_1602957639320",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@specials",
+      "dialog_node": "node_6_1602961083926"
+    },
+    {
+      "type": "standard",
+      "title": "deleting context",
+      "output": {
+        "deleted": "<?context.remove{'items'}?><?context.remove{'number'}?><?context.remove{'payment'}?><?context.remove{'email'}?><?context.remove{'address'}?><?context.remove{'contactnumber'}?>",
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602961810225",
+      "conditions": "true",
+      "dialog_node": "node_8_1602963665353"
+    },
+    {
+      "type": "standard",
+      "title": "enquiry",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#enquiry || @enquiry",
+      "digress_in": "returns",
+      "dialog_node": "node_9_1602957639320",
+      "digress_out": "allow_all_never_return",
+      "previous_sibling": "node_2_1602952292421"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Today's offer Rs 120/kg"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1602961083926",
+      "conditions": "@specials:(Dragon Fruit)",
+      "dialog_node": "response_10_1602961238069",
+      "previous_sibling": "response_8_1602961199587"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Morning"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1602952292421",
+      "conditions": "@greetings:(Good Morning)",
+      "dialog_node": "response_1_1602952571735"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "source": "https://mll7qqnftged.i.optimole.com/e06KA8M-nIsYH6lH/w:auto/h:auto/q:75/https://www.wingrowagritech.com/wp-content/uploads/2020/06/final-rate-card.jpeg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_9_1602957639320",
+      "conditions": "@enquiry:price",
+      "dialog_node": "response_2_1602958442107",
+      "previous_sibling": "response_8_1602957739014"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "special items",
+            "options": [
+              {
+                "label": "Bell Pepper",
+                "value": {
+                  "input": {
+                    "text": "Bell Pepper"
+                  }
+                }
+              },
+              {
+                "label": "Dragon Fruit",
+                "value": {
+                  "input": {
+                    "text": "Dragon Fruit"
+                  }
+                }
+              },
+              {
+                "label": "Strawberries",
+                "value": {
+                  "input": {
+                    "text": "Strawberries"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1602957639320",
+      "conditions": "@enquiry:(special item)",
+      "dialog_node": "response_2_1602960391942",
+      "previous_sibling": "response_9_1602960080912"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hii"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1602952292421",
+      "conditions": "anything_else",
+      "dialog_node": "response_3_1602953070202",
+      "previous_sibling": "response_5_1602953022579"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Afternoon"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1602952292421",
+      "conditions": "@greetings:(Good Afternoon)",
+      "dialog_node": "response_4_1602953006046",
+      "previous_sibling": "response_1_1602952571735"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good evening"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1602952292421",
+      "conditions": "@greetings:(Good Evening)",
+      "dialog_node": "response_5_1602953022579",
+      "previous_sibling": "response_4_1602953006046"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "list of vegetable and fruits",
+            "source": "https://mll7qqnftged.i.optimole.com/e06KA8M-nIsYH6lH/w:auto/h:auto/q:75/https://www.wingrowagritech.com/wp-content/uploads/2020/06/final-rate-card.jpeg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_9_1602957639320",
+      "conditions": "@enquiry:list",
+      "dialog_node": "response_8_1602957739014",
+      "previous_sibling": "node_6_1602961083926"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Today's offer Rs 100/kg"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1602961083926",
+      "conditions": "@specials:(Bell Pepper)",
+      "dialog_node": "response_8_1602961199587"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Today's offer Rs 80/kg"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1602961083926",
+      "conditions": "@specials:Strawberries",
+      "dialog_node": "response_8_1602961279758",
+      "previous_sibling": "response_10_1602961238069"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We are having Onions for Rs 25/kg"
+              },
+              {
+                "text": "We are having  Apples for Rs 80/dozen"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1602957639320",
+      "conditions": "@enquiry:offers",
+      "dialog_node": "response_9_1602960080912",
+      "previous_sibling": "response_2_1602958442107"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1602961810225",
+      "variable": "$payment",
+      "dialog_node": "slot_1_1602963003153",
+      "previous_sibling": "slot_2_1602962965528"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1602961810225",
+      "variable": "$number",
+      "dialog_node": "slot_2_1602962965528",
+      "previous_sibling": "slot_5_1602962201447"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1602961810225",
+      "variable": "$items",
+      "dialog_node": "slot_5_1602962201447",
+      "previous_sibling": "handler_1_1602962200299"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1602961810225",
+      "variable": "$contactnumber",
+      "dialog_node": "slot_8_1603011311975",
+      "previous_sibling": "slot_1_1602963003153"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1602961810225",
+      "variable": "$address",
+      "dialog_node": "slot_9_1603011369141",
+      "previous_sibling": "slot_8_1603011311975"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. I am a Online shop Chat Bot for online shopping of essentials.To shop online follow the procedure:\n1. Please give us your name ,contact number,address and email id\n2. See the list of items  and cost of vegetables and fruits available in the Store\n3. Check for special discount or offers\n4. Place your order\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "ChatBot to shop for essentials during pandemic",
+  "language": "en",
+  "description": ""
+}
